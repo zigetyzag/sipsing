@@ -1,57 +1,119 @@
 /* Custom styles for Sipsing DJ Manager */
+:root {
+  --primary-color: #563d7c;
+  --primary-dark: #452d6b;
+  --primary-light: #7952b3;
+  --accent-color: #e83e8c;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.bg-purple-900 {
+  background-color: var(--primary-color);
 }
 
 .header {
-    background-color: #563d7c; /* Purple header like in your original app */
-    color: white;
-    padding: 1rem;
-    margin-bottom: 1rem;
-}
-
-.tab-button {
-    padding: 0.75rem 1.5rem;
-    border: none;
-    background: transparent;
-    font-weight: 500;
-    color: #6c757d;
-    border-bottom: 2px solid transparent;
-}
-
-.tab-button.active {
-    color: #563d7c;
-    border-bottom: 2px solid #563d7c;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card {
-    margin-bottom: 1rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .now-singing {
-    background: linear-gradient(90deg, #563d7c, #9954bb);
-    color: white;
-    border-radius: 0.5rem;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  color: white;
+  border-radius: 0.5rem;
 }
 
 .time-warning {
-    background: linear-gradient(90deg, #dc3545, #f78b77);
-    color: white;
+  background: linear-gradient(90deg, #dc3545, #f78b77);
+  color: white;
 }
 
 .next-up {
-    background-color: #e9ecef;
-    border-left: 4px solid #6495ed;
+  background-color: #e9ecef;
+  border-left: 4px solid #6495ed;
 }
 
 .song-boost {
-    color: #dc3545;
-    font-size: 0.875rem;
+  color: #dc3545;
+  font-size: 0.875rem;
 }
 
 .seat-occupant {
-    font-weight: normal;
+  font-weight: normal;
+}
+
+/* Nav tab styling */
+.nav-tabs .nav-link {
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: #6c757d;
+  padding: 0.75rem 1rem;
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: white;
+  font-weight: 500;
+}
+
+/* Toast styling */
+.toast-container {
+  z-index: 1090;
+}
+
+/* Form controls */
+.form-control:focus, .form-select:focus {
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 0.25rem rgba(121, 82, 179, 0.25);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
+/* Animation for song changes */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-title {
+    font-size: 1.25rem;
+  }
+  
+  .display-4, .display-6 {
+    font-size: 1.75rem;
+  }
 }
