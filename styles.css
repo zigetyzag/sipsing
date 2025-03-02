@@ -1,0 +1,57 @@
+/* Custom styles for Sipsing DJ Manager */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.header {
+    background-color: #563d7c; /* Purple header like in your original app */
+    color: white;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    color: #6c757d;
+    border-bottom: 2px solid transparent;
+}
+
+.tab-button.active {
+    color: #563d7c;
+    border-bottom: 2px solid #563d7c;
+}
+
+.card {
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.now-singing {
+    background: linear-gradient(90deg, #563d7c, #9954bb);
+    color: white;
+    border-radius: 0.5rem;
+}
+
+.time-warning {
+    background: linear-gradient(90deg, #dc3545, #f78b77);
+    color: white;
+}
+
+.next-up {
+    background-color: #e9ecef;
+    border-left: 4px solid #6495ed;
+}
+
+.song-boost {
+    color: #dc3545;
+    font-size: 0.875rem;
+}
+
+.seat-occupant {
+    font-weight: normal;
+}
